@@ -8,6 +8,8 @@ get '/' do
 end
 
 get '/results' do
-	@result_num = params.fetch('search_target').word_freq(params.fetch('input_word'))
+	@search_word = params.fetch('search_word')
+	@search_target = params.fetch('search_target')
+	@result_num = @search_target.word_freq(@search_word)
 	erb :results
 end

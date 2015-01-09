@@ -7,6 +7,6 @@ describe 'String#word_freq' do
 		expect('foo'.word_freq('bar')).to eq 0
 	end
 	it 'returns the number of times input word is found' do
-		expect('foo bar foo bar').word_freq('bar')).to eq 2
+		expect('foo bar foo bar'.word_freq('bar')).to eq 2
 	end
 end

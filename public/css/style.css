@@ -1,11 +1,42 @@
-body {
-	background: 
-	linear-gradient(135deg, #ECEDDC 25%, transparent 25%) -50px 0,
-	linear-gradient(225deg, #ECEDDC 25%, transparent 25%) -50px 0,
-	linear-gradient(315deg, #ECEDDC 25%, transparent 25%),
-	linear-gradient(45deg, #ECEDDC 25%, transparent 25%);	
-	background-size: 100px 100px;
-	background-color: #EC173A;
+html, body {
+  height: 100%;
+}
 
-	font-family: 'Cabin Condensed', sans-serif;
+.container{
+  width:1025px;
+}
+
+.vertical-center {
+  height:100%;
+  width:100%;
+  text-align: center;
+  font: 0/0 a;
+  background-color: blue;
+  color: white;
+}
+
+.vertical-center:before {
+  content: ' ';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.vertical-center > .container {
+  max-width: 100%;
+
+  display: inline-block;
+  vertical-align: middle;
+  font-family: 'Cabin Condensed', sans-serif;
+}
+
+@media (max-width: 768px) {
+  .vertical-center:before {
+    display: none;
+  }
+}
+
+.btn {
+	background-color: white;
+	color: blue;
 }

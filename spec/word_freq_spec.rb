@@ -9,4 +9,7 @@ describe 'String#word_freq' do
 	it 'returns the number of times input word is found' do
 		expect('foo bar foo bar'.word_freq('bar')).to eq 2
 	end
+	it 'does not count partial matches' do
+		expect('foobar'.word_freq('bar')).to eq 0
+	end
 end

@@ -3,7 +3,7 @@ class String
 		search_array = self.split(" ")
 		word_count = 0
 		search_array.each do |word|
-			if word.include?(input_word)
+			if word == input_word
 				word_count += 1
 			end
 		end

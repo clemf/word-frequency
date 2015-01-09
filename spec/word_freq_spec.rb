@@ -12,4 +12,7 @@ describe 'String#word_freq' do
 	it 'does not count partial matches' do
 		expect('foobar'.word_freq('bar')).to eq 0
 	end
+	it 'removes all non-word characters' do
+		expect('foo, foo!'.word_freq('foo')).to eq 2
+	end
 end

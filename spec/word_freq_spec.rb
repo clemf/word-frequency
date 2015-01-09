@@ -1,6 +1,5 @@
 require 'rspec'
 require 'word_freq'
-require 'pry'
 
 describe 'String#word_freq' do
 	it 'returns 0 if the word is not found' do
@@ -14,5 +13,8 @@ describe 'String#word_freq' do
 	end
 	it 'removes all non-word characters' do
 		expect('foo, foo!'.word_freq('foo')).to eq 2
+	end
+	it 'ignores case of input' do
+		expect('FooBar'.word_freq('foobar')).to eq 1
 	end
 end

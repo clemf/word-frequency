@@ -11,7 +11,13 @@ html, body {
   width:100%;
   text-align: center;
   font: 0/0 a;
-  background-color: blue;
+	background:
+	radial-gradient(black 15%, transparent 16%) 0 0,
+	radial-gradient(black 15%, transparent 16%) 8px 8px,
+	radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
+	radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
+	background-color:#282828;
+	background-size:16px 16px;
   color: white;
 }
 
@@ -36,7 +42,11 @@ html, body {
   }
 }
 
-.btn {
-	background-color: white;
-	color: blue;
+h1, h2, h3, h4, .btn {
+color: white;
+  text-shadow:
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+     1px 1px 0 #000;
 }
